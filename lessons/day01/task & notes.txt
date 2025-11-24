@@ -1,0 +1,11 @@
+Terraform: Infrastructure as Code (IaC)
+
+⦁	What it is: Terraform is a popular, cloud-agnostic Infrastructure as Code (IaC) tool created by HashiCorp.
+
+⦁	Core Purpose: It allows you to define and provision cloud infrastructure (like AWS EC2, VPC, S3) using human-readable code (.tf files) instead of manual console clicks.
+
+⦁	Language: It uses HCL (HashiCorp Configuration Language), which is simple, declarative, and similar to JSON.
+
+⦁	Key Workflow: The standard workflow involves terraform init (initialize), terraform plan (preview changes), and terraform apply (create/update resources).
+
+⦁	Benefits: It enables consistency, automation, version control for your infrastructure, and the ability to easily create/destroy environments to save costs.
