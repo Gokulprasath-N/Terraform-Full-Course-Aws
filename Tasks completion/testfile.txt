@@ -1,8 +1,0 @@
-Subject: Test Mail
-
-Hi,
-
-This is a test mail to check the functionality.
-
-Best regards,
-[Your Name]
