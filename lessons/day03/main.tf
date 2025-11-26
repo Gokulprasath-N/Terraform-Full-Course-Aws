@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "~> 6.0"
+      version = "6.22.1"
     }
   }
 }
@@ -13,11 +13,11 @@ provider "aws" {
 }
 
 # Create a S3 bucket
-resource "aws_s3_bucket" "tf_test_baivab_bucket" {
-  bucket = "my-tf-test-baiv-bucket"
+resource "aws_s3_bucket" "S3_bucket_test" {
+  bucket = "my-s3-bucket-unique-name-gokulprasath-12345"
 
   tags = {
     Name        = "My bucket"
-    Environment = "Dev"
+    Environment = "testing"
   }
 }
