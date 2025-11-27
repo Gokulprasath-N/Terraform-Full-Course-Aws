@@ -1,33 +1,35 @@
-# Configure the AWS Provider
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 6.0"
     }
   }
 }
 
+# Configure the AWS Provider
 provider "aws" {
-  # Configuration options
-    region = "ca-central-1"
+  region = "us-east-1"
 }
 
 # backend configuration
 terraform {
   backend "s3" {
-    bucket         = "erraform-state-1754513244"
-    key            = "dev/terraform.tfstate"
-    region         = "ca-central-1"
+    bucket         = "my-terraform-statefile-gokulprasath-unique-12345"
+    key            = "backend/backup/terraform.tfstate"
+    region         = "us-east-1"
+
+    # It prevents two people (or two CI/CD pipelines) 
+    # from running terraform apply at the exact same time.
     use_lockfile  = "true"
+
+    # When Terraform uploads your state file (terraform.tfstate) to the S3 bucket, Amazon S3 encrypts it before saving it to the disk. It decrypts it automatically when Terraform needs to read it.
     encrypt        = true
   }
 }
-
-
 # Simple test resource to verify remote backend
 resource "aws_s3_bucket" "test_backend" {
-  bucket = "test-remote-backend-${random_string.bucket_suffix.result}"
+  bucket = "gokulprasath-terraform-backend-12345"
 
   tags = {
     Name        = "Test Backend Bucket"
@@ -35,8 +37,4 @@ resource "aws_s3_bucket" "test_backend" {
   }
 }
 
-resource "random_string" "bucket_suffix" {
-  length  = 8
-  special = false
-  upper   = false
-}
+
