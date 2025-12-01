@@ -44,13 +44,13 @@
 ## Quick Tasks
 
 ### What to Do
-- [ ] Watch the Day 08 video and take notes
-- [ ] Write a short blog (500-800 words) about what you learned
+- [x] Watch the Day 08 video and take notes
+- [x] Write a short blog (500-800 words) about what you learned
     - Include your own diagrams and code examples
     - Embed the video
-- [ ] Share your blog on LinkedIn and Twitter/X with **#30daysofawsterraform**
-- [ ] Tag Piyush Sachdeva
-- [ ] Submit your work (see `submission.md` for instructions)
+- [x] Share your blog on LinkedIn and Twitter/X with **#30daysofawsterraform**
+- [x] Tag Piyush Sachdeva
+- [x] Submit your work (see `submission.md` for instructions)
 
 ### Tips
 - Keep it simple and clear
