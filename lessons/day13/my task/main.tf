@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
 
 # 1. Fetch the default VPC using a Tag Filter
 data "aws_vpc" "selected_vpc" {
@@ -45,6 +42,9 @@ resource "aws_instance" "web_server" {
   subnet_id     = data.aws_subnet.selected_subnet.id
 
   tags = {
-    Name = "Day13-Dynamic-Instance"
+    Name = "Gokul-EC2-Instance"
+  }
+  lifecycle {
+    create_before_destroy = true
   }
 }
