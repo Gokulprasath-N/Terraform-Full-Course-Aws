@@ -22,7 +22,7 @@ resource "aws_elastic_beanstalk_application_version" "v1" {
 resource "aws_elastic_beanstalk_environment" "blue" {
   name                = "${var.app_name}-blue"
   application         = aws_elastic_beanstalk_application.app.name
-  solution_stack_name = var.solution_stack_name
+  platform_arn = var.platform_arn
   tier                = "WebServer"
   version_label       = aws_elastic_beanstalk_application_version.v1.name
 
